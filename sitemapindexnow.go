@@ -24,9 +24,9 @@
 //		_ = body
 //	}
 //
-// Standard library only. Extracted from the publishing layer of the agentic
-// site pipeline at https://aiwebsitepipeline.com/ so that the sitemap-to-
-// IndexNow step can be reused and tested on its own.
+// Standard library only. Written for the publishing step of the agentic site
+// pipeline at https://aiwebsitepipeline.com/ and kept as its own module so the
+// sitemap-to-IndexNow hop can be tested without the rest of it.
 package sitemapindexnow
 
 import (

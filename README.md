@@ -58,7 +58,7 @@ for _, s := range subs {
 * `ParseURLSet` refuses a `<sitemapindex>` document, because treating an index as a
   urlset is how a pipeline ends up submitting its own sitemaps as pages.
 
-Standard library only. Extracted from the publishing layer of the pipeline at
-<https://aiwebsitepipeline.com/>.
+Standard library only. Written for the publishing step of the pipeline at
+<https://aiwebsitepipeline.com/> and kept as its own module.
 
 MIT licensed.
