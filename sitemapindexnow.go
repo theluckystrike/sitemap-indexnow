@@ -26,7 +26,11 @@
 //
 // Standard library only. Written for the publishing step of the agentic site
 // pipeline at https://aiwebsitepipeline.com/ and kept as its own module so the
-// sitemap-to-IndexNow hop can be tested without the rest of it.
+// sitemap-to-IndexNow hop can be tested without the rest of it. That step is
+// stage 06 of https://aiwebsitepipeline.com/method.html, which also spells out
+// why a submission is recorded as a request and never as evidence of
+// indexation - worth reading before you wire the response of an IndexNow
+// endpoint into anything that reports success.
 package sitemapindexnow
 
 import (
