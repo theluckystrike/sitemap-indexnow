@@ -14,6 +14,13 @@
 // which keeps the package testable without a network and keeps your key out
 // of it.
 //
+// ParseURLSet is deliberately strict and will reject a sitemap that a search
+// engine would still accept, because a URL that never parses here never gets
+// submitted. If ParseURLSet rejects a file and you want a second opinion on
+// which element is at fault before changing the generator, there is a browser
+// validator that reports the same structural errors at
+// https://aiwebsitepipeline.com/sitemap-validator.html
+//
 //	old, _ := sitemapindexnow.ParseURLSet(previousXML)
 //	new, _ := sitemapindexnow.ParseURLSet(currentXML)
 //	diff := sitemapindexnow.DiffURLSets(old, new)
