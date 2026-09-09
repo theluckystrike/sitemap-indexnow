@@ -21,6 +21,13 @@
 // validator that reports the same structural errors at
 // https://aiwebsitepipeline.com/sitemap-validator.html
 //
+// ParseURLSet also does not read robots.txt. A URL that is disallowed there
+// is accepted here and goes into a submission, and the receiving engine will
+// simply not crawl it. To know which rule would decide for a given URL before
+// it is submitted, the checker at
+// https://aiwebsitepipeline.com/robots-txt-checker.html reports the rule that
+// decided, not only the verdict.
+//
 //	old, _ := sitemapindexnow.ParseURLSet(previousXML)
 //	new, _ := sitemapindexnow.ParseURLSet(currentXML)
 //	diff := sitemapindexnow.DiffURLSets(old, new)
