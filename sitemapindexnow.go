@@ -28,6 +28,13 @@
 // https://aiwebsitepipeline.com/robots-txt-checker.html reports the rule that
 // decided, not only the verdict.
 //
+// Nor does it fetch the URLs, so a page that carries a noindex in its meta
+// robots tag or its X-Robots-Tag header is submitted like any other. IndexNow
+// will prompt a fetch, and the fetch will then keep the page out of the index.
+// robots.txt and noindex fail in opposite directions - one stops the fetch,
+// the other stops the indexing after it - and the difference is laid out at
+// https://aiwebsitepipeline.com/noindex-vs-robots-txt.html
+//
 //	old, _ := sitemapindexnow.ParseURLSet(previousXML)
 //	new, _ := sitemapindexnow.ParseURLSet(currentXML)
 //	diff := sitemapindexnow.DiffURLSets(old, new)
